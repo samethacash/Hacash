@@ -488,11 +488,12 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(fetchHacashPrice, 30000);
     
     // ===== Progressive Web App: Register Service Worker =====
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('sw.js', { scope: '/' })
-            .then(reg => console.log('Service Worker registered'))
-            .catch(err => console.warn('Service Worker registration failed:', err));
-    }
+    // Disabled to prevent auto-download prompts on mobile
+    // if ('serviceWorker' in navigator) {
+    //     navigator.serviceWorker.register('sw.js', { scope: '/' })
+    //         .then(reg => console.log('Service Worker registered'))
+    //         .catch(err => console.warn('Service Worker registration failed:', err));
+    // }
     
     // ===== Request Idle Time for Non-Critical Tasks =====
     if ('requestIdleCallback' in window) {
