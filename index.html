@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://api.coingecko.com;">
+    <meta name="description" content="Hacash - Real-Time Global Cryptocurrency Settlement Network with 1M+ TPS capability">
+    <meta name="keywords" content="Hacash, cryptocurrency, blockchain, payments, settlement">
+    <meta name="theme-color" content="#0066cc">
+    <meta name="author" content="Hacash">
+    <meta name="robots" content="index, follow">
+    <title>Hacash - Real-Time Cryptocurrency Settlement Network</title>
+    <link rel="canonical" href="https://hacashwebsite.com/">
+    <link rel="manifest" href="manifest.json">
+    <link rel="preload" as="image" href="images/logo.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Hacash Logo" class="logo-img">
+                <div class="logo-text">
+                    <h1>HACASH</h1>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#problem">Problem & Solution</a></li>
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#stats">Key Stats</a></li>
+                <li><a href="#highlights">Highlights</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#usecases">Use Cases</a></li>
+                <li><a href="#technology">Technology</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="https://hacash.org/whitepaper.pdf" target="_blank" rel="noopener noreferrer">Whitepaper</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Price Banner -->
+    <div class="price-banner">
+        <div class="container">
+            <div class="price-banner-content">
+                <div class="price-display">
+                    <span class="price-label">HAC:</span>
+                    <span class="price-value" id="hacPrice">--</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Real-Time Global Payments <span class="highlight-text">at Scale</span></h2>
+            <p class="hero-subtitle">What if Bitcoin could process <strong>millions of transactions per second</strong>? Hacash makes it possible through intelligent channel chains and cryptographic security—<strong>without sacrificing decentralization</strong>.</p>
+            
+            <div class="hero-highlight-box">
+                <div class="highlight-row">
+                    <span class="highlight-label">The Problem:</span>
+                    <span class="highlight-value">Bitcoin processes 7 TPS • Visa handles 65,000+ • Traditional finance takes days</span>
+                </div>
+                <div class="highlight-row">
+                    <span class="highlight-label">The Solution:</span>
+                    <span class="highlight-value">Hacash scales infinitely while maintaining true decentralization</span>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-number">1M+</div>
+                    <div class="stat-label">TPS Capability</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🕐</div>
+                    <div class="stat-number">Instant</div>
+                    <div class="stat-label">Settlement</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🔐</div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Decentralized</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-number">Minimal</div>
+                    <div class="stat-label">Fees</div>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#problem" class="btn btn-primary btn-large">Discover Solution</a>
+                <a href="https://hacash.org/whitepaper.pdf" class="btn btn-secondary btn-large" target="_blank" rel="noopener noreferrer">Read Full Paper</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem & Solution Section -->
+    <section id="problem" class="problem-solution">
+        <div class="container">
+            <h2>The Payment Problem</h2>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>Bitcoin's Challenge</h3>
+                    <p>Bitcoin processes only 7 transactions per second. Visa handles 65,000+. Yet crypto promises to revolutionize global payments.</p>
+                    <div class="problem-detail">Current TPS: 7 | Required: 1,000,000+</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>Lightning Network's Limits</h3>
+                    <p>Payment channels work but create hub-and-spoke centralization. Large hubs become the new banks with single points of failure.</p>
+                    <div class="problem-detail">Risk: Network concentration and trust</div>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">❌</div>
+                    <h3>Traditional Finance Issues</h3>
+                    <p>Banks control your money. Fees are high. Settlement takes days. International transfers require intermediaries at every step.</p>
+                    <div class="problem-detail">Cost: 2-5% per transaction</div>
+                </div>
+            </div>
+
+            <div class="solution-box">
+                <h2>The Hacash Solution</h2>
+                <p class="solution-intro">Hacash solves all three problems simultaneously through an elegant system of interconnected payment channels with game-theoretic security.</p>
+                
+                <div class="solution-grid">
+                    <div class="solution-card">
+                        <div class="solution-icon">✨</div>
+                        <h3>Infinite Scalability</h3>
+                        <p>Channel chains scale to unlimited transactions per second. No single bottleneck. No settlement delays.</p>
+                    </div>
+                    <div class="solution-card">
+                        <div class="solution-icon">🕸️</div>
+                        <h3>Decentralized Network</h3>
+                        <p>Thousands of independent nodes form a settlement network. Locking periods prevent hub centralization. No single entity controls payments.</p>
+                    </div>
+                    <div class="solution-card">
+                        <div class="solution-icon">🛡️</div>
+                        <h3>Cryptographic Security</h3>
+                        <p>Dishonesty costs 100% of funds. Real-time atomic settlements mean zero counterparty risk. Rules replace trust.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Statistics Section -->
+    <section id="stats" class="statistics">
+        <div class="container">
+            <h2>The Numbers That Matter</h2>
+            <div class="stats-grid">
+                <div class="stat-card featured">
+                    <div class="stat-value">315%</div>
+                    <div class="stat-description">Annual Return Rate</div>
+                    <p>With minimal fees (0.1%) on channel funds, node operators earn exceptional returns while providing critical infrastructure.</p>
+                </div>
+                <div class="stat-card featured">
+                    <div class="stat-value">86.4M</div>
+                    <div class="stat-description">Times Daily Utilization</div>
+                    <p>Only 0.0000116% of funds need to be locked to process daily transaction volume equivalent to total currency issuance.</p>
+                </div>
+                <div class="stat-card featured">
+                    <div class="stat-value">3</div>
+                    <div class="stat-description">Transactions/Second Min</div>
+                    <p>Per channel with guaranteed atomic settlement. Scale to billions through parallel channels without degradation.</p>
+                </div>
+                <div class="stat-card featured">
+                    <div class="stat-value">22M</div>
+                    <div class="stat-description">Total Supply</div>
+                    <p>Created over 66 years with rules-based issuance. No central bank manipulation. Transparent, predictable inflation.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">1.056%</div>
+                    <div class="stat-description">Channel Interest</div>
+                    <p>Annual compound interest at 0.1% every 34 days for locked channel funds, incentivizing network participation.</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">∞</div>
+                    <div class="stat-description">Divisibility</div>
+                    <p>Up to 10^248 smaller units. Perfect for any transaction size from micropayments to institutional transfers.</p>
+                </div>
+            </div>
+
+            <div class="efficiency-box">
+                <h3>Capital Efficiency Example</h3>
+                <p><strong>Scenario:</strong> 100 units of capital allocated to channel network</p>
+                <div class="calculation-steps">
+                    <div class="step">
+                        <span class="step-num">1</span>
+                        <span class="step-text">Daily volume: 8,640,000 units</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">2</span>
+                        <span class="step-text">Annual utilization: 3+ billion transactions</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">3</span>
+                        <span class="step-text">Value locked: 0.0000116%</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">4</span>
+                        <span class="step-text">Result: Infinite scalability with minimal capital</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Overview Section -->
+    <section id="overview" class="overview-section">
+        <div class="container">
+            <h2>System Overview</h2>
+            
+            <div class="overview-image-wrapper">
+                <img src="images/three-layers-system.png" alt="3 Layers Supports A Large Economic System" class="overview-diagram">
+            </div>
+            
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="icon">🌐</div>
+                    <h3>Channel Chain Settlement</h3>
+                    <p>Private off-chain payment channels with real-time settlement guarantee. No intermediary can withhold funds through atomic operations.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="icon">⚡</div>
+                    <h3>Unlimited Scalability</h3>
+                    <p>Infinitely expand transaction volume per second through interconnected payment channels forming a global settlement network.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="icon">🔐</div>
+                    <h3>Trustless Security</h3>
+                    <p>Cryptographic proof and punitive measures ensure fund security. Dishonest parties face complete fund seizure.</p>
+                </div>
+                <div class="overview-card">
+                    <div class="icon">💰</div>
+                    <h3>Fair Currency Design</h3>
+                    <p>Rules-based currency issuance preventing artificial monetary policies. Three-tier heterogeneous currency system.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h4>✓ Composite Signature Addresses</h4>
+                    <p>Support for multi-signature accounts (1/2, 2/2, 1/3, 2/3, 3/3) up to 200 keys for joint custody and enhanced security.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>✓ Hierarchical Equity Control</h4>
+                    <p>Corporate equity structures with voting rights, beneficiary rights, and changeable management while maintaining fixed addresses.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>✓ Multi-Party Transactions</h4>
+                    <p>Simultaneous execution of multiple actions with atomic guarantees. All succeed or all fail—no intermediate states.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>✓ Diverse Payment Categories</h4>
+                    <p>Self-pay, payment requests, delegated payments, and specialized equity operations for modern financial needs.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>✓ Real-Time Settlement</h4>
+                    <p>Synchronized fund transfer across all parties. Immediate receipt with zero settlement lag in the channel network.</p>
+                </div>
+                <div class="feature-item">
+                    <h4>✓ Privacy Mechanisms</h4>
+                    <p>Payment mixing, forward deferred payments, encrypted channels, and anonymity protection while maintaining auditability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="usecases" class="usecases">
+        <div class="container">
+            <h2>Real-World Applications</h2>
+            <p class="section-intro">Hacash isn't theoretical. These practical use cases show why the world needs it now.</p>
+            
+            <div class="usecases-grid">
+                <div class="usecase-card">
+                    <div class="usecase-icon">🏪</div>
+                    <h3>Retail & E-Commerce</h3>
+                    <p><strong>Problem:</strong> Credit cards charge 2-3% per transaction. Verification takes days.</p>
+                    <p><strong>Hacash Solution:</strong></p>
+                    <ul>
+                        <li>Instant payment settlement at point of sale</li>
+                        <li>Fees under 0.1% through channel networks</li>
+                        <li>Merchant receives funds in milliseconds</li>
+                        <li>Works globally without payment processors</li>
+                    </ul>
+                </div>
+
+                <div class="usecase-card">
+                    <div class="usecase-icon">🌍</div>
+                    <h3>International Remittances</h3>
+                    <p><strong>Problem:</strong> Sending money abroad costs 5-10%. Takes 3-5 business days.</p>
+                    <p><strong>Hacash Solution:</strong></p>
+                    <ul>
+                        <li>Cross-border payments in seconds</li>
+                        <li>No intermediaries = no middleman fees</li>
+                        <li>Corridor path auto-discovery</li>
+                        <li>Real-time FX at market rates</li>
+                    </ul>
+                </div>
+
+                <div class="usecase-card">
+                    <div class="usecase-icon">🏢</div>
+                    <h3>Corporate Accounting & Treasury</h3>
+                    <p><strong>Problem:</strong> Multi-entity settlements take weeks. Complex reconciliation.</p>
+                    <p><strong>Hacash Solution:</strong></p>
+                    <ul>
+                        <li>Hierarchical equity control for complex corporate structures</li>
+                        <li>Instant inter-company settlements</li>
+                        <li>Automatic reconciliation and audit trails</li>
+                        <li>Multi-signature approval workflows</li>
+                    </ul>
+                </div>
+
+                <div class="usecase-card">
+                    <div class="usecase-icon">💼</div>
+                    <h3>Payroll & Wage Systems</h3>
+                    <p><strong>Problem:</strong> Traditional payroll takes days. Workers can't access earnings immediately.</p>
+                    <p><strong>Hacash Solution:</strong></p>
+                    <ul>
+                        <li>Real-time wage payments as work is completed</li>
+                        <li>No payment processor delays</li>
+                        <li>Gig economy: instant per-task settlement</li>
+                        <li>Workers control their earnings immediately</li>
+                    </ul>
+                </div>
+
+                <div class="usecase-card">
+                    <div class="usecase-icon">📊</div>
+                    <h3>Supply Chain Payments</h3>
+                    <p><strong>Problem:</strong> Suppliers wait 30-90 days for payment. Businesses need working capital.</p>
+                    <p><strong>Hacash Solution:</strong></p>
+                    <ul>
+                        <li>Payment on delivery, not NET-30</li>
+                        <li>Smart contract conditions (inspection confirmation)</li>
+                        <li>Supplier access to capital without factoring</li>
+                        <li>Transparent transaction history</li>
+                    </ul>
+                </div>
+
+                <div class="usecase-card">
+                    <div class="usecase-icon">🎮</div>
+                    <h3>Gaming & Virtual Economies</h3>
+                    <p><strong>Problem:</strong> In-game transactions locked to single platform. Players can't trade or cash out.</p>
+                    <p><strong>Hacash Solution:</strong></p>
+                    <ul>
+                        <li>Interoperable game assets and payments</li>
+                        <li>Player-to-player transactions at no cost</li>
+                        <li>Real-time monetization of achievements</li>
+                        <li>Cross-game economy possible</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="technology">
+        <div class="container">
+            <h2>Technology & Innovation</h2>
+            
+            <div class="tech-image-wrapper">
+                <img src="images/architecture-diagram.png" alt="Hacash Architecture Diagram" class="tech-diagram">
+            </div>
+            
+            <div class="tech-section">
+                <h3>Channel Chain Architecture</h3>
+                <div class="tech-content">
+                    <div class="tech-text">
+                        <p>Two accounts lock funds creating a payment channel. Multiple transactions occur off-chain without broadcasting, with only the final balance submitted to the main network.</p>
+                        <ul class="tech-list">
+                            <li><strong>Off-Chain Settlement:</strong> Unlimited private transactions between channel participants</li>
+                            <li><strong>Sequential Signing:</strong> Multi-step signing protocol ensuring fund security</li>
+                            <li><strong>Atomic Operations:</strong> All-or-nothing settlement preventing partial transfers</li>
+                            <li><strong>Punitive Measures:</strong> Dishonest parties lose all channel funds</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-section">
+                <h3>Scalability Without Centralization</h3>
+                <div class="tech-content">
+                    <div class="tech-text">
+                        <p>Fund calculation demonstrates extreme efficiency. With 100 units locked, daily transaction volume can reach 8.6 million units—a fund utilization multiplier of 86.4 million times per year.</p>
+                        <div class="calculation-box">
+                            <p><strong>Mathematical Efficiency:</strong></p>
+                            <p>Only <strong>0.0000116%</strong> of funds need to be locked to support daily payment volume equivalent to total currency issuance.</p>
+                            <p>With 0.1% fee rate: <strong>315% annual return</strong> (without compounding)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tech-section">
+                <h3>Security Through Incentives</h3>
+                <div class="tech-content">
+                    <div class="tech-text">
+                        <p>The system leverages game theory and rational self-interest to maintain security:</p>
+                        <ul class="tech-list">
+                            <li><strong>Locking Period:</strong> Prevents excessive centralization of hub nodes</li>
+                            <li><strong>Arbitration Protection:</strong> Unilateral channel termination with time-locked penalties</li>
+                            <li><strong>Balance Verification:</strong> Latest signed balance determines rightful ownership</li>
+                            <li><strong>Fund Seizure:</strong> Complete account balance confiscation for dishonesty</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Channel Network Section -->
+    <section id="channels" class="channels">
+        <div class="container">
+            <h2>Payment Channel Network</h2>
+            
+            <div class="channel-flow">
+                <div class="flow-header">
+                    <h3>How Channel Chain Payments Work</h3>
+                    <p class="flow-subtitle">A 4-step circular process enabling instant, trustless payments across the network</p>
+                </div>
+                <div class="flow-diagram">
+                    <div class="flow-item">
+                        <div class="flow-step step-1">
+                            <div class="step-badge">
+                                <div class="step-number">1</div>
+                            </div>
+                            <div class="step-content">
+                                <h4>Route Discovery</h4>
+                                <p>Customer A queries the network to find a channel path to Merchant D through nodes C and B</p>
+                            </div>
+                        </div>
+                        <div class="arrow arrow-right">→</div>
+                    </div>
+                    
+                    <div class="flow-item">
+                        <div class="flow-step step-2">
+                            <div class="step-badge">
+                                <div class="step-number">2</div>
+                            </div>
+                            <div class="step-content">
+                                <h4>Transaction Construction</h4>
+                                <p>Merchant D constructs a chained payment transaction specifying amount and fees for all channels</p>
+                            </div>
+                        </div>
+                        <div class="arrow arrow-down">↓</div>
+                    </div>
+                    
+                    <div class="flow-item">
+                        <div class="flow-step step-4">
+                            <div class="step-badge">
+                                <div class="step-number">4</div>
+                            </div>
+                            <div class="step-content">
+                                <h4>Real-Time Settlement</h4>
+                                <p>Final signature activates all transfers. Funds received simultaneously across all parties</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-item">
+                        <div class="arrow arrow-left">←</div>
+                        <div class="flow-step step-3">
+                            <div class="step-badge">
+                                <div class="step-number">3</div>
+                            </div>
+                            <div class="step-content">
+                                <h4>Sequential Signing</h4>
+                                <p>Starting from merchant, each party signs and forwards signatures in reverse payment order</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="channel-types">
+                <h3>Channel Types</h3>
+                <div class="types-grid">
+                    <div class="type-card">
+                        <h4>Standard Channel</h4>
+                        <p><strong>Lock Time:</strong> 100ms - few seconds</p>
+                        <p><strong>Throughput:</strong> ~3 transactions/second</p>
+                        <p><strong>Use:</strong> Secure payments from strangers with real-time verification</p>
+                    </div>
+                    <div class="type-card">
+                        <h4>Fast Channel</h4>
+                        <p><strong>Reconciliation:</strong> Hourly or periodic</p>
+                        <p><strong>Throughput:</strong> 2000+ transactions/second</p>
+                        <p><strong>Use:</strong> Trusted partners, microtransactions, internal transfers</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="channel-balance">
+                <h3>Balancing Payments</h3>
+                <p>Channels can be rebalanced using offset settlement transactions, allowing merchants to receive and send funds efficiently without frequent main network interactions or excessive fund locking.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Incentives Section -->
+    <section id="incentives" class="incentives">
+        <div class="container">
+            <h2>Incentive Mechanisms</h2>
+            <div class="incentives-grid">
+                <div class="incentive-card">
+                    <h3>📊 Competitive Bookkeeping</h3>
+                    <p>Proof-of-Work mining with Fibonacci-sequence rewards (1→8→1 over 66 years). Total supply: <strong>22 million coins</strong></p>
+                </div>
+                <div class="incentive-card">
+                    <h3>💳 Public Ledger Fees</h3>
+                    <p>Dynamic fee bidding ensures transaction priority. Miners incentivized to maximize block transactions.</p>
+                </div>
+                <div class="incentive-card">
+                    <h3>🌐 Channel Service Fees</h3>
+                    <p>Nodes earn variable fees based on market competition, hardware costs, and service quality.</p>
+                </div>
+                <div class="incentive-card">
+                    <h3>💰 Channel Interest</h3>
+                    <p>0.1% compound interest every ~34 days (~1.056% annual) for locked channel funds</p>
+                </div>
+                <div class="incentive-card">
+                    <h3>💎 Block Diamond</h3>
+                    <p>Heterogeneous currency with dynamic supply adjustment. Capped at ~17 million diamonds with exponentially increasing difficulty.</p>
+                </div>
+                <div class="incentive-card">
+                    <h3>🔗 Bitcoin Integration</h3>
+                    <p>One-way Bitcoin transfer with new coin issuance. Irreversible bridge between Bitcoin and Hacash ecosystems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Currency Section -->
+    <section id="currency" class="currency">
+        <div class="container">
+            <h2>Currency System</h2>
+            
+            <div class="currency-image-wrapper">
+                <img src="images/pow-coins-system.png" alt="3 PoW Coins Form A Sound Money System" class="currency-diagram">
+            </div>
+            
+            <div class="currency-structure">
+                <h3>Three-Tier Heterogeneous Currency</h3>
+                <div class="currency-tiers">
+                    <div class="tier">
+                        <h4>1. Block Diamond 💎</h4>
+                        <ul>
+                            <li>Absolute finite supply (~17 million)</li>
+                            <li>Indivisible and unique</li>
+                            <li>Ever-increasing mining difficulty</li>
+                            <li>Source: Proof-of-Work mining</li>
+                        </ul>
+                    </div>
+                    <div class="tier">
+                        <h4>2. Transferred Bitcoin 🔗</h4>
+                        <ul>
+                            <li>Finite total supply</li>
+                            <li>Fully divisible</li>
+                            <li>One-way irreversible transfer</li>
+                            <li>Bridge to Bitcoin ecosystem</li>
+                        </ul>
+                    </div>
+                    <div class="tier">
+                        <h4>3. New Currency 💰</h4>
+                        <ul>
+                            <li>Infinite supply with rules-based growth</li>
+                            <li>Infinite divisibility</li>
+                            <li>Predictable issuance schedule</li>
+                            <li>From mining and channel interest</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="currency-units">
+                <h3>Units and Precision</h3>
+                <table class="units-table">
+                    <tr>
+                        <th>Unit</th>
+                        <th>Symbol</th>
+                        <th>Value</th>
+                        <th>Precision</th>
+                    </tr>
+                    <tr>
+                        <td>Mei</td>
+                        <td>Ⓜ</td>
+                        <td>1</td>
+                        <td>10^248 divisible</td>
+                    </tr>
+                    <tr>
+                        <td>Zhu</td>
+                        <td>Ⓩ</td>
+                        <td>100 million</td>
+                        <td>10^240 divisible</td>
+                    </tr>
+                    <tr>
+                        <td>Shuo</td>
+                        <td>Ⓢ</td>
+                        <td>10^16</td>
+                        <td>10^232 divisible</td>
+                    </tr>
+                    <tr>
+                        <td>Ai</td>
+                        <td>Ⓐ</td>
+                        <td>10^24</td>
+                        <td>10^224 divisible</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="issuance-info">
+                <h3>Issuance Schedule</h3>
+                <p><strong>Phase 1 (Years 0-0.95):</strong> Exponential growth 1→2→3→5→8</p>
+                <p><strong>Phase 2 (Years 1-10):</strong> Linear decrease 8→5→3→2→1</p>
+                <p><strong>Phase 3 (Year 10+):</strong> Stable 1 unit per block indefinitely</p>
+                <p class="highlight"><strong>Total Supply (66 years):</strong> 22,000,000 coins</p>
+                <p><strong>Long-term Annual Rate:</strong> ~0.48% (decreasing asymptotically to 0)</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security & Privacy Section -->
+    <section id="security" class="security">
+        <div class="container">
+            <h2>Security & Privacy</h2>
+            
+            <div class="security-grid">
+                <div class="security-item">
+                    <h3>🛡️ Attack Prevention</h3>
+                    <ul>
+                        <li><strong>51% Attack:</strong> Historical witness path selection + fork voting</li>
+                        <li><strong>Double Spending:</strong> Sequential signing with fund seizure penalty</li>
+                        <li><strong>Channel Fraud:</strong> Risk deposits and commercial reputation systems</li>
+                        <li><strong>DDoS Protection:</strong> Channel utilization scoring against delayed signature attacks</li>
+                    </ul>
+                </div>
+                <div class="security-item">
+                    <h3>🔒 Privacy Features</h3>
+                    <ul>
+                        <li><strong>Anonymity:</strong> Pseudonymous addresses with pseudonym separation</li>
+                        <li><strong>Payment Mixing:</strong> Fixed-amount group transfers reducing payer-payee linkage</li>
+                        <li><strong>Deferred Payment:</strong> Time-delayed receipt obscuring final recipient</li>
+                        <li><strong>Encrypted Channels:</strong> End-to-end encrypted settlement network</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hash-algo">
+                <h3>X16RS Hash Algorithm</h3>
+                <p>Upgraded version of X16R using 16 randomly combined hashing algorithms. Resists ASIC centralization with randomized algorithm sequencing for each step, making FPGA designs inefficient.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <p class="section-intro">Common questions about how Hacash works and why it matters.</p>
+            
+            <div class="faq-grid">
+                <details class="faq-item">
+                    <summary>
+                        <h3>How is Hacash different from Bitcoin?</h3>
+                        <span class="faq-toggle">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p><strong>Bitcoin:</strong> 7 transactions/second, 10-minute blocks, fixed supply of 21M, no built-in scaling.</p>
+                        <p><strong>Hacash:</strong> Infinite TPS through channel chains, instant settlement, 22M with rules-based issuance, designed for real-world commerce from day one.</p>
+                        <p>Hacash doesn't replace Bitcoin—it's an evolved design addressing Bitcoin's original limitations while maintaining its core security model.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <h3>Isn't this just Lightning Network?</h3>
+                        <span class="faq-toggle">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p><strong>Lightning:</strong> Hub-and-spoke topology, channels lock funds in pairs, risk of hub failures.</p>
+                        <p><strong>Hacash:</strong> Mesh network topology, channels support parallel flows, locking periods prevent centralization, atomic multi-channel payments.</p>
+                        <p>Key difference: Hacash's forced decentralization through technical design prevents hubs from becoming the new banks.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <h3>How does security work if I'm not on the main chain?</h3>
+                        <span class="faq-toggle">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Hacash uses game theory, not just cryptography. Key mechanisms:</p>
+                        <ul>
+                            <li><strong>Atomic settlements:</strong> Funds transfer simultaneously across the entire channel chain. If any party fails, the entire transaction fails—no one loses money.</li>
+                            <li><strong>Punitive mechanism:</strong> Dishonest parties lose 100% of locked funds. The cost of fraud exceeds the benefit.</li>
+                            <li><strong>Instant verification:</strong> Each party cryptographically verifies before signing. No trust required.</li>
+                            <li><strong>Main chain as arbitrator:</strong> Only final settlement needed. Dispute resolution happens on-chain with swift, severe penalties.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <h3>What if a channel operator goes offline?</h3>
+                        <span class="faq-toggle">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Unlike Lightning Network, Hacash has built-in safeguards:</p>
+                        <ul>
+                            <li><strong>Immediate settlement:</strong> Once you sign, funds are yours. An offline operator can't take your money.</li>
+                            <li><strong>Unilateral channel closure:</strong> You can broadcast the latest signed balance to the main network and withdraw. Penalties exist to deter this, but you won't lose funds.</li>
+                            <li><strong>Distributed network:</strong> With thousands of operators, finding an alternative route is trivial. No single point of failure.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <h3>Who controls Hacash? Can it be "shut down"?</h3>
+                        <span class="faq-toggle">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>No one and everyone.</p>
+                        <ul>
+                            <li><strong>Decentralized:</strong> Thousands of independent nodes run the network. No central point of control.</li>
+                            <li><strong>Open source:</strong> Anyone can run a node. Code is transparent and auditable.</li>
+                            <li><strong>Governed by rules:</strong> Currency issuance, security parameters, and protocol rules are algorithmic—not controlled by corporations or governments.</li>
+                            <li><strong>Network resilience:</strong> To "shut down" Hacash, you'd need to simultaneously stop thousands of independent operators worldwide. Economically and technically impossible.</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <h3>How do I earn money by running a Hacash node?</h3>
+                        <span class="faq-toggle">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Three revenue streams:</p>
+                        <ul>
+                            <li><strong>Channel fees:</strong> Charge 0.1-1% per transaction routed through your channels. With 315% annual return potential, this alone is lucrative.</li>
+                            <li><strong>Channel interest:</strong> 0.1% compound every 34 days on locked funds. ~1.056% annual. Passive income just for participating.</li>
+                            <li><strong>Mining rewards:</strong> Compete for block rewards (starting at 1 coin per block). Additional incentive to secure the network.</li>
+                        </ul>
+                        <p>Operating a node requires capital to lock in channels but generates exceptional returns compared to traditional finance.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <h3>Is Hacash anonymous?</h3>
+                        <span class="faq-toggle">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Hacash is pseudonymous by default with optional privacy enhancements:</p>
+                        <ul>
+                            <li><strong>Pseudonymity:</strong> Addresses don't contain personal information.</li>
+                            <li><strong>Payment mixing:</strong> Groups of payments obscure sender-receiver relationships.</li>
+                            <li><strong>Deferred payments:</strong> Separate payment time from receipt time to hide final recipient.</li>
+                            <li><strong>Encrypted channels:</strong> Off-chain transactions hidden from public view.</li>
+                        </ul>
+                        <p>Unlike Monero or Zcash, Hacash balances privacy with auditability—good for commerce, not criminals.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <h3>How does Hacash handle regulation?</h3>
+                        <span class="faq-toggle">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>Hacash is designed for legal commerce:</p>
+                        <ul>
+                            <li><strong>Auditability:</strong> Full transaction history is cryptographically verifiable. Regulators can audit.</li>
+                            <li><strong>KYC/AML compatible:</strong> While network is decentralized, commercial operators can implement KYC on channels if required.</li>
+                            <li><strong>Privacy when needed:</strong> Built-in privacy features balance regulatory compliance with user rights.</li>
+                            <li><strong>Self-sovereign:</strong> Users control their own wallets. No intermediary to regulate.</li>
+                        </ul>
+                        <p>Regulation of crypto will focus on on/off ramps, not the currency itself. Hacash works with this model.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <h3>When was Hacash created? Is it active?</h3>
+                        <span class="faq-toggle">+</span>
+                    </summary>
+                    <div class="faq-answer">
+                        <p>The whitepaper was published in 2018 by an anonymous author. It presents the theoretical framework and technical specifications.</p>
+                        <p>This document is for educational purposes and to introduce the Hacash concept to potential developers, investors, and researchers interested in advanced payment systems.</p>
+                        <p>The whitepaper demonstrates forward-thinking solutions to cryptocurrency's real limitations.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Whitepaper Section -->
+    <section id="whitepaper" class="whitepaper">
+        <div class="container">
+            <h2>Full Whitepaper</h2>
+            <p class="whitepaper-intro">Read the complete technical specification of the Hacash cryptocurrency system. The whitepaper details all mechanisms, protocols, and design principles.</p>
+            
+            <div class="whitepaper-toc">
+                <h3>Table of Contents</h3>
+                <ol>
+                    <li>Preface (Crisis, Future of Currency, What We Need)</li>
+                    <li>Basic Principles (Technical Theories, Self-Interest, Shortcomings)</li>
+                    <li>Channel Chain Settlement Network (Assumptions, Principles, Implementation)</li>
+                    <li>Transactions (Data Structures, Multisignature, Equity Control)</li>
+                    <li>Incentives (Bookkeeping, Fees, Interest, Diamonds)</li>
+                    <li>Currency (Supply, Bitcoin Integration, Units)</li>
+                    <li>Privacy (Anonymity, Mixing, Deferred Payments)</li>
+                    <li>Risks and Precautions (Attack vectors and mitigations)</li>
+                    <li>Technical Design Principles</li>
+                    <li>Conclusion and Appendices</li>
+                </ol>
+            </div>
+
+            <div class="whitepaper-content">
+                <h3>Complete Whitepaper Content</h3>
+
+                <!-- Section 1: Preface -->
+                <details class="content-section full-width">
+                    <summary><strong>1. Preface</strong></summary>
+                    <div class="details-content">
+                        <h4>1.1 Crisis</h4>
+                        <p>The financial system faces fundamental challenges rooted in mandatory sovereign credit currency and fractional reserve banking. These create cycles of economic crises that disproportionately harm the vulnerable while enriching large capital holders.</p>
+                        <p>The solution requires a currency system with "hard constraints" - one that no institution can easily debase, reducing trust costs while maintaining economic stability.</p>
+                        
+                        <h4>1.2 The Future of Currency</h4>
+                        <p>Currency has evolved through five stages: universal value objects, rare stable objects, trust-based certificates, sovereign credit symbols, and now electronic network systems based on "recognized rules" with "individual credit" as supplements.</p>
+                        <p>Bitcoin's emergence in 2008 provided the foundational direction, but more is needed: a system that achieves scale while maintaining trustlessness and transparency.</p>
+                        
+                        <h4>1.3 What Do We Need</h4>
+                        <p>The blockchain solution is not about decentralization for its own sake, but about trustlessness - reducing structural trust risks. We need hard constraints and minimized trust, a currency system that no one can easily debase without consuming resources to do so.</p>
+                    </div>
+                </details>
+
+                <!-- Section 2: Basic Principles -->
+                <details class="content-section full-width">
+                    <summary><strong>2. Basic Principles</strong></summary>
+                    <div class="details-content">
+                        <h4>2.1 Technical Theories</h4>
+                        <p>Electronic currency has a fatal flaw: unlimited replication at zero cost. Solution: assign unique numbers to currency units with an announced upper limit, use signatures to indicate ownership. This solves counterfeiting but creates the double-spending problem.</p>
+                        
+                        <h4>2.2 Principle of Self-Interest</h4>
+                        <p>Cooperation systems relying solely on honesty are unsustainable. Bitcoin solved this by combining ledger recording with currency issuance, providing incentives for everyone to maintain honest records through Proof-of-Work.</p>
+                        
+                        <h4>2.3 Shortcomings</h4>
+                        <p>Bitcoin's limitations: (1) High energy consumption in mining, and (2) Low transaction throughput (~7 TPS). The paper argues energy consumption is not truly a drawback - it introduces hard constraints through market forces. However, low throughput is a real limitation for global commerce.</p>
+                    </div>
+                </details>
+
+                <!-- Section 3: Channel Chain Settlement Network -->
+                <details class="content-section full-width">
+                    <summary><strong>3. Channel Chain Settlement Network</strong></summary>
+                    <div class="details-content">
+                        <h4>3.1 Fundamental Assumptions</h4>
+                        <p>Punitive mechanisms can enforce honesty even in systems with inherent risks. The public ledger should function as arbitration and final clearing, not record every transaction.</p>
+                        
+                        <h4>3.2 Main Principles</h4>
+                        <p>Real-time, no-loss microtransactions through bi-directional settlement channels. Funds settle synchronously across channel chains - all parties receive/disburse simultaneously, preventing any "intermediate state" where one side gains while another loses.</p>
+                        
+                        <h4>3.3 Technical Implementation</h4>
+                        <p>Process flow: (1) Joint channels lock funds, (2) Off-chain settlements between parties, (3) Channel routing finds payment paths through network, (4) Sequential signing ensures atomicity - either all succeed or all fail.</p>
+                        
+                        <h4>3.4 Channel Closure</h4>
+                        <p>When both parties agree on final balance, they sign a closure transaction and broadcast to main network for confirmation. Funds return to both parties immediately after confirmation.</p>
+                        
+                        <h4>3.5 Arbitration Protection</h4>
+                        <p>Unilateral channel termination is possible but penalized: the initiator's account locks for a period (e.g., 1 week). If dishonest parties submit outdated balances, the honest party can seize all funds including the locked balance.</p>
+                        
+                        <h4>3.6 Balancing Payments</h4>
+                        <p>Channel offset settlements allow merchant-node and personal channels to rebalance atomically, improving fund utilization without frequent main network interactions.</p>
+                        
+                        <h4>3.7 Decentralization</h4>
+                        <p>Two key features prevent excessive centralization: (1) Immediate settlement prevents node failures from locking funds, (2) Single-transaction-at-a-time locking deters hub nodes by making large fund lockups unprofitable.</p>
+                        
+                        <h4>3.8 Fast Channels</h4>
+                        <p>For trusted long-term relationships, delayed reconciliation (hourly) increases throughput from ~10 TPS to 2000+ TPS without settlement risks.</p>
+                        
+                        <h4>3.9 Fund Calculation</h4>
+                        <p>With 100 units locked in channels supporting 3 TPS: Daily volume = 4.3M units (best case 8.6M). Fund utilization: 86.4M times daily. With fees at 1/100M: Net annual return ~315%.</p>
+                    </div>
+                </details>
+
+                <!-- Section 4: Transactions -->
+                <details class="content-section full-width">
+                    <summary><strong>4. Transactions</strong></summary>
+                    <div class="details-content">
+                        <h4>4.1 Basic Data Structures</h4>
+                        <p>Three-level hierarchy: Blocks >> Transactions >> Actions. Simple, human-readable, compact format for both machine and human verification. Transactions contain: actions (operations), signs (individual signatures), multisigns (multi-signature data).</p>
+                        
+                        <h4>4.2 Multisignature Addresses</h4>
+                        <p>Support for 2/2, 1/2, 2/3, 1/3 configurations and more. Multiple private keys manage single addresses. Up to 200 private keys can manage one multisignature address. No single secret key; security distributed across key holders.</p>
+                        
+                        <h4>4.3 Hierarchical Equity Control Accounts</h4>
+                        <p>Support modern corporate structures with beneficiary and voting rights. Features: jointmanagement, dynamic key changes, changeable voting ratios, different rights per equity, fund protection in extreme cases (collective key loss scenarios).</p>
+                        
+                        <h4>4.4 Multi-Signature Transactions</h4>
+                        <p>Atomic operations requiring multiple signatures. If one action fails, all fail. Prevents fraud in equity investments and complex financial operations where both parties must simultaneously commit.</p>
+                        
+                        <h4>4.5 Payment Categories</h4>
+                        <p>Support for diverse payment types: self-pay, payment requests, delegated payments, and equity operations. Different contract structures for different business scenarios.</p>
+                        
+                        <h4>4.6 Signature Stripping</h4>
+                        <p>Signatures occupy significant block space. After sufficient confirmation (1+ year), signature data can be stripped from historical transactions while maintaining core transaction data, reducing blockchain size dramatically.</p>
+                        
+                        <h4>4.7 Transaction Fees</h4>
+                        <p>Fees collected by miners create economic incentive for participation. Fluctuate based on network congestion. Can be zero or negative (subsidies). Fee payer's signature separated from other participants.</p>
+                        
+                        <h4>4.8 Field Formats</h4>
+                        <p>Standardized formats for transaction data using scientific notation for monetary amounts, ensuring consistency and efficiency across the network.</p>
+                    </div>
+                </details>
+
+                <!-- Section 5: Incentives -->
+                <details class="content-section full-width">
+                    <summary><strong>5. Incentives</strong></summary>
+                    <div class="details-content">
+                        <h4>5.1 Competitive Bookkeeping Rewards</h4>
+                        <p>Miners compete through Proof-of-Work (X16RS hash algorithm) to earn right to append blocks. Ensures honest record-keeping without central authority. X16RS resists ASIC dominance through 16-random algorithm combination.</p>
+                        
+                        <h4>5.2 Public Ledger Fees</h4>
+                        <p>Transaction fees paid by users go to miners who maintain the network. Creates immediate economic incentive for participation and network security.</p>
+                        
+                        <h4>5.3 Channel Service Fees</h4>
+                        <p>Nodes operating channels collect small fees for transfer services. Incentivizes network participation and stable service provision from distributed nodes.</p>
+                        
+                        <h4>5.4 Channel Interest</h4>
+                        <p>0.1% compound interest every 34 days (~11% annually) on locked funds in channels. Rewards capital provisioning and liquidity services. Makes channel operation economically attractive.</p>
+                        
+                        <h4>5.5 Block Diamond</h4>
+                        <p>Separate mining process producing "Block Diamonds" - dynamic currency supply units. Adjusts based on network demand and usage. Total possible: 16^6 = 16.7M diamonds. Mining time: ~25 min per diamond. Maximum daily production: ~58 diamonds.</p>
+                        
+                        <h4>5.6 Data Services</h4>
+                        <p>Long-term incentive structures for maintaining historical data and providing archived ledger services to network participants.</p>
+                    </div>
+                </details>
+
+                <!-- Section 6: Currency -->
+                <details class="content-section full-width">
+                    <summary><strong>6. Currency</strong></summary>
+                    <div class="details-content">
+                        <h4>6.1 Total Supply and Growth</h4>
+                        <p><strong>Phase 1 (Years 0-0.95):</strong> Fibonacci sequence: 1, 1, 2, 3, 5, 8 coins per block<br>
+                        <strong>Phase 2 (Years 1-10):</strong> Decreasing: 8, 5, 3, 2, 1, 1 coins per block<br>
+                        <strong>Phase 3 (Year 10+):</strong> Stable 1 coin per block indefinitely<br>
+                        <strong>Total Supply:</strong> 22,000,000 coins<br>
+                        <strong>Long-term Annual Issuance:</strong> ~0.48% (asymptotically decreasing)</p>
+                        
+                        <h4>6.2 One-Way Transfer Compatible with Bitcoin</h4>
+                        <p>Bitcoin can be permanently transferred to Hacash through "black hole address" mechanism. Equivalent Hacash coins issued with lock-up periods (20 years for first coin, 5 years for second/third, 2.5 years for fourth-seventh) to mitigate volatility and suppress speculation.</p>
+                        
+                        <h4>6.3 Units and Symbols</h4>
+                        <p>Standardized unit definitions and symbols for clarity in transactions and accounting.</p>
+                        
+                        <h4>6.4 Prohibition of Artificial Monetary Policies</h4>
+                        <p>Currency issuance follows algorithmic rules, not discretionary policy. Prevents institutional manipulation and wealth redistribution through inflation.</p>
+                    </div>
+                </details>
+
+                <!-- Section 7: Privacy -->
+                <details class="content-section full-width">
+                    <summary><strong>7. Privacy</strong></summary>
+                    <div class="details-content">
+                        <h4>7.1 Anonymity</h4>
+                        <p>Balance privacy with auditability. Without privacy, currency fungibility suffers - different coins have different values based on transaction history.</p>
+                        
+                        <h4>7.2 Payment Mixing</h4>
+                        <p>Fixed-amount payment mixing: groups collectively transfer same amounts, making precise payer-payee matching impossible. More participants = better privacy protection.</p>
+                        
+                        <h4>7.3 Forward Deferred Payment</h4>
+                        <p>Intermediary receives transaction from payer, creates temporary hashed address. Payer funds locked with time-delay release. Intermediary claims after original transaction confirms. If unclaimed after timeout (1 year), funds return to payer.</p>
+                        
+                        <h4>7.4 Encrypted Settlement Network</h4>
+                        <p>Channel transaction data encrypted from broader network visibility while maintaining auditability for authorized parties.</p>
+                        
+                        <h4>7.5 Channel Reversal</h4>
+                        <p>Technical capability to reverse transaction direction in channels for privacy purposes.</p>
+                    </div>
+                </details>
+
+                <!-- Section 8: Risks and Precautions -->
+                <details class="content-section full-width">
+                    <summary><strong>8. Risks and Precautions</strong></summary>
+                    <div class="details-content">
+                        <h4>8.1 Channel Chain Delayed Signature Attack</h4>
+                        <p>Attackers initiate massive small payments to delay signatures and reach lock timeouts. Mitigation: track payer address, cumulative amounts, lock times. Calculate utilization scores - abnormally low scores restrict payment frequency.</p>
+                        
+                        <h4>8.2 Low-Cost Channel Fraud</h4>
+                        <p>Risk when one party doesn't monitor channels. Mitigations: (1) Risk deposit per account across multiple channels as fraud insurance, (2) Nodes disclose channel lists and identities, (3) Breach terminates all channel cooperation.</p>
+                        
+                        <h4>8.3 Channel Credit Currency Creation and Default</h4>
+                        <p>Fast channels allow temporary negative balances during delayed reconciliation. Risks limited by: micro-payment amount restrictions and frequent reconciliation requirements.</p>
+                        
+                        <h4>8.4 Centralization of Hash Power, 51% Attacks, and Guerrilla Mining</h4>
+                        <p><strong>X16RS Algorithm:</strong> 16-random hash combination resists ASIC and FPGA dominance.<br>
+                        <strong>Historical Witness Path Selection:</strong> Wealthy accounts sign block broadcasts creating "witness value." Attacker's secret chain cannot surpass transparent fork's witness value, making attacks fail.<br>
+                        <strong>Fork Selection by Vote:</strong> Users with locked channel funds gain voting rights. During attacks, voting transactions accumulate. When threshold reached, miners switch to honest chain.</p>
+                        
+                        <h4>8.5 Extreme Price Fluctuations</h4>
+                        <p>Addressed through proper currency issuance design, algorithmic supply adjustments via Block Diamonds, and Bitcoin integration lock-up periods that suppress speculative behavior.</p>
+                    </div>
+                </details>
+
+                <!-- Section 9: Technical Design Principles -->
+                <details class="content-section full-width">
+                    <summary><strong>9. Principles of Technical Design</strong></summary>
+                    <div class="details-content">
+                        <h4>9.1 Simplicity and Intuitiveness</h4>
+                        <p>Human-readable, understandable protocols. No smart contracts with hidden vulnerabilities. Users without technical background must understand contract terms. Financial systems cannot tolerate software vulnerabilities.</p>
+                        
+                        <h4>9.2 Compact Data and Efficient Execution</h4>
+                        <p>Balance generality with performance. Save every byte and CPU cycle where possible. Efficiency in core critical parts takes priority over module elegance.</p>
+                        
+                        <h4>9.3 Controllable Scale of Public Ledger Data</h4>
+                        <p>Block size and frequency must remain compatible with mid-range consumer hardware. Prevents centralization of ledger data among well-funded institutions. Maintains true decentralization capability.</p>
+                        
+                        <h4>9.4 Signature Stripping and Data Compression</h4>
+                        <p>After ~1 year, blocks cannot rollback. Strip signature data (significant portion of block) and compress transaction data. Create state snapshots monthly/yearly for historical reference without signature bloat.</p>
+                    </div>
+                </details>
+
+                <!-- Section 10: Conclusion -->
+                <details class="content-section full-width">
+                    <summary><strong>10. Conclusion</strong></summary>
+                    <div class="details-content">
+                        <p>Hacash represents a complete cryptocurrency system designed specifically for large-scale real-world payments and instant settlement. By combining channel chain technology with Bitcoin-style security, hierarchical transaction support, and carefully designed economic incentives, it achieves:</p>
+                        <ul>
+                            <li><strong>Infinite Scalability:</strong> Through channel chains, not network bloat</li>
+                            <li><strong>Hard Constraints:</strong> Algorithmic rules, no policy discretion</li>
+                            <li><strong>Trustlessness:</strong> Punitive mechanisms ensure honesty</li>
+                            <li><strong>Privacy:</strong> Balancing anonymity with auditability</li>
+                            <li><strong>Enterprise Ready:</strong> Complex transaction types for corporate structures</li>
+                            <li><strong>Self-Sustaining:</strong> Multiple incentive mechanisms ensure participation</li>
+                        </ul>
+                        <p>The system addresses cryptocurrency's fundamental challenge: creating a currency that is simultaneously secure, scalable, and trustless - suitable for the next generation of global commerce.</p>
+                    </div>
+                </details>
+
+                <!-- Appendices -->
+                <details class="content-section full-width">
+                    <summary><strong>Appendix 1: Block Data Structure Definitions</strong></summary>
+                    <div class="details-content">
+                        <p><strong>Three-level Hierarchy:</strong> Blocks >> Transactions >> Actions</p>
+                        <p><strong>Block Structure:</strong></p>
+                        <ul>
+                            <li>Block Header: Version, previous hash, merkle root, timestamp, difficulty, nonce</li>
+                            <li>Transactions: Ordered list of transaction data</li>
+                        </ul>
+                        <p><strong>Transaction Structure:</strong></p>
+                        <ul>
+                            <li>Actions: Payment instructions and operations</li>
+                            <li>Signs: Individual signatures</li>
+                            <li>Multisigns: Multi-signature data for joint accounts</li>
+                        </ul>
+                        <p>Designed for compact storage while maintaining human readability for auditability. Signature stripping supported for historical data after sufficient confirmation time.</p>
+                    </div>
+                </details>
+
+                <details class="content-section full-width">
+                    <summary><strong>Appendix 2: Algorithm Implementations</strong></summary>
+                    <div class="details-content">
+                        <h4>X16RS Hash Algorithm</h4>
+                        <p>Evolution of X16R combining 16 different hashing algorithms randomly. Each step randomizes the algorithm selection, preventing ASIC/FPGA efficiency gains. Maintains broader mining participation.</p>
+                        
+                        <h4>Block Reward Calculation</h4>
+                        <p><strong>Phase 1 (0-0.95 years):</strong> Fibonacci: 1, 1, 2, 3, 5, 8<br>
+                        <strong>Phase 2 (1-10 years):</strong> Decreasing: 8, 5, 3, 2, 1, 1<br>
+                        <strong>Phase 3 (10+ years):</strong> Stable: 1 per block<br>
+                        <strong>Total Supply:</strong> 22,000,000 coins<br>
+                        <strong>Annual Issuance (Long-term):</strong> ~0.48% (decreasing asymptotically)</p>
+                        
+                        <h4>Block Diamond Production</h4>
+                        <p><strong>Formula:</strong> hash256((genesis_block_hash || prev_diamond_block_hash) + belong_user_public_key + nonce_number)<br>
+                        <strong>Compression:</strong> 4-bit to character mapping (0WTYUIAHXVMEKBSZN)<br>
+                        <strong>Valid Diamond Criteria:</strong> First 10+ characters as "0", no trailing zeros<br>
+                        <strong>Total Possible:</strong> 16^6 = 16,777,216<br>
+                        <strong>Maximum Daily:</strong> ~58 diamonds (~21,000/year)</p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="whitepaper-download">
+                <h3>Download the Complete Whitepaper</h3>
+                <p style="margin-bottom: 25px;">
+                    <a href="https://hacash.org/whitepaper.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="display: inline-block;">📥 Download PDF (82 Pages)</a>
+                </p>
+                <h3 style="margin-top: 30px; margin-bottom: 15px;">Complete Reference Information</h3>
+                <p>The complete 82-page whitepaper includes:</p>
+                <ul class="references-list">
+                    <li>Detailed block data structure definitions (JSON format examples)</li>
+                    <li>Algorithm implementations (X16RS hash, block diamond mining, reward calculations)</li>
+                    <li>Complete issuance schedules and Bitcoin transfer mechanics with lock-up periods</li>
+                    <li>Field format specifications with scientific notation for monetary amounts</li>
+                    <li>Privacy mechanism implementations and protocol specifications</li>
+                    <li>Risk analysis and comprehensive attack mitigation strategies</li>
+                    <li>Mathematical calculations for channel efficiency and fund utilization</li>
+                </ul>
+            </div>
+
+            <div class="references-section">
+                <h3>Academic References</h3>
+                <ol class="references-list">
+                    <li><strong>Adam Back</strong> - "Hashcash - A Denial of Service Counter-Measure" (2002)</li>
+                    <li><strong>Satoshi Nakamoto</strong> - "Bitcoin: A Peer-to-Peer Electronic Cash System" (2008)</li>
+                    <li><strong>Ludwig von Mises</strong> - "Theory of Money and Credit" (1912)</li>
+                    <li><strong>Friedrich August von Hayek</strong> - "Individualism and Economic Order" (1948)</li>
+                    <li><strong>J. Huerta de Soto</strong> - "Money, Bank Credit and Economic Cycles" (1997)</li>
+                    <li><strong>Joseph Poon & Thaddeus Dryja</strong> - "The Bitcoin Lightning Network: Scalable Off-Chain Instant Payments" (2016)</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="comparison">
+        <div class="container">
+            <h2>Hacash vs. Existing Solutions</h2>
+            <table class="comparison-table">
+                <tr>
+                    <th>Feature</th>
+                    <th>Bitcoin</th>
+                    <th>Lightning Network</th>
+                    <th>Hacash</th>
+                </tr>
+                <tr>
+                    <td><strong>TPS (Transactions/Second)</strong></td>
+                    <td>~7</td>
+                    <td>Millions (theoretical)</td>
+                    <td>Infinite (scalable)</td>
+                </tr>
+                <tr>
+                    <td><strong>Settlement Speed</strong></td>
+                    <td>10 minutes</td>
+                    <td>Near-instant</td>
+                    <td>Instant (atomic)</td>
+                </tr>
+                <tr>
+                    <td><strong>Total Supply</strong></td>
+                    <td>21 million (fixed)</td>
+                    <td>N/A (layer 2)</td>
+                    <td>22 million + inflation (rules-based)</td>
+                </tr>
+                <tr>
+                    <td><strong>Equity Control</strong></td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>Yes (hierarchical)</td>
+                </tr>
+                <tr>
+                    <td><strong>Multisignature</strong></td>
+                    <td>Basic</td>
+                    <td>Limited</td>
+                    <td>Advanced (up to 200 keys)</td>
+                </tr>
+                <tr>
+                    <td><strong>Centralization Risk</strong></td>
+                    <td>Low</td>
+                    <td>Hub-based (medium)</td>
+                    <td>Minimal (distributed nodes)</td>
+                </tr>
+                <tr>
+                    <td><strong>Payment Mixing</strong></td>
+                    <td>No</td>
+                    <td>Limited</td>
+                    <td>Built-in (fixed-amount)</td>
+                </tr>
+                <tr>
+                    <td><strong>Channel Interest</strong></td>
+                    <td>N/A</td>
+                    <td>No</td>
+                    <td>Yes (0.1% per 34 days)</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- Design Principles Section -->
+    <section id="principles" class="principles">
+        <div class="container">
+            <h2>Design Principles</h2>
+            <div class="principles-grid">
+                <div class="principle">
+                    <h3>1️⃣ Simplicity & Intuitiveness</h3>
+                    <p>Human-readable protocols. No "smart contracts" with hidden vulnerabilities. Financial system users should understand contract terms without specialized expertise.</p>
+                </div>
+                <div class="principle">
+                    <h3>2️⃣ Compact & Efficient</h3>
+                    <p>Every byte and CPU cycle matters. Balances generality with performance. Signature stripping and data compression for scalable ledger growth.</p>
+                </div>
+                <div class="principle">
+                    <h3>3️⃣ Controllable Scale</h3>
+                    <p>Public ledger data growth constrained to mid-range consumer hardware capacity. Preserves decentralization and prevents institutional monopolies.</p>
+                </div>
+                <div class="principle">
+                    <h3>4️⃣ Rules-Based, Not Policy-Based</h3>
+                    <p>Currency issuance follows algorithmic rules, not discretionary monetary policy. Prevents institutional manipulation and wealth redistribution through inflation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Highlights Section -->
+    <section id="highlights" class="investment-highlights">
+        <div class="container">
+            <h2>Investment Highlights</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: #999;">Key differentiators and technical advantages that position Hacash for enterprise adoption and real-world payments</p>
+            
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">⚡</div>
+                    <h3>Infinite Scalability</h3>
+                    <p>Achieve millions of transactions per second through a sophisticated channel-based architecture that doesn't compromise on decentralization or security.</p>
+                    <ul class="highlight-list">
+                        <li>Multi-channel architecture</li>
+                        <li>No centralized hubs required</li>
+                        <li>Linear scalability</li>
+                        <li>Off-chain settlement</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">🔐</div>
+                    <h3>Bitcoin-Grade Security</h3>
+                    <p>Leverages Bitcoin's proven cryptographic model while introducing sophisticated financial features designed for institutional-grade reliability.</p>
+                    <ul class="highlight-list">
+                        <li>Cryptographic security</li>
+                        <li>Transparent ledger</li>
+                        <li>No smart contract risks</li>
+                        <li>Proven consensus mechanism</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">💰</div>
+                    <h3>Token Economics</h3>
+                    <p>A carefully designed currency model with finite supply, algorithmic issuance, and real utility across global payment networks and commerce ecosystems.</p>
+                    <ul class="highlight-list">
+                        <li>22M total supply</li>
+                        <li>Algorithmic distribution</li>
+                        <li>Block diamonds (mining rewards)</li>
+                        <li>Bitcoin integration bridge</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">🌐</div>
+                    <h3>Enterprise Ready</h3>
+                    <p>Designed specifically for merchant adoption, cross-border payments, and high-volume transaction settlement in real-time, with minimal fees and no intermediaries.</p>
+                    <ul class="highlight-list">
+                        <li>Sub-second settlement</li>
+                        <li>Minimal transaction costs</li>
+                        <li>Programmable payments</li>
+                        <li>Privacy-preserving mixing</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">🛡️</div>
+                    <h3>Decentralization Focused</h3>
+                    <p>Architectural decisions prioritize network decentralization and individual node operation, preventing institutional monopolization and ensuring long-term resilience.</p>
+                    <ul class="highlight-list">
+                        <li>Auditable by consumers</li>
+                        <li>Run on commodity hardware</li>
+                        <li>No special privilege nodes</li>
+                        <li>Community-driven governance</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="highlight-icon">📊</div>
+                    <h3>Market Positioning</h3>
+                    <p>Addresses the exact gap in the cryptocurrency ecosystem: Bitcoin's store-of-value positioning combined with practical payment efficiency for daily commerce and institutional settlement.</p>
+                    <ul class="highlight-list">
+                        <li>Post-Bitcoin maturation</li>
+                        <li>Lightning Network improvements</li>
+                        <li>Institutional payment layer</li>
+                        <li>Global commerce readiness</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlights-summary">
+                <h3>Why Hacash Matters</h3>
+                <p>In a cryptocurrency market dominated by either store-of-value narratives (Bitcoin) or experimental smart contract platforms (Ethereum), Hacash uniquely positions itself as the specialized protocol for what money was originally designed to do: <strong>enable efficient, secure, and trustless exchange of value at scale</strong>.</p>
+                <p>The whitepaper represents 5+ years of research into optimal cryptocurrency design, synthesizing lessons from Bitcoin, Lightning Network, and first-principles financial systems thinking into a coherent, implementable architecture.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Understand the Future of Money?</h2>
+            <p>Hacash represents a fundamental rethinking of cryptocurrency design, combining Bitcoin's security model with Lightning Network's scalability while adding sophisticated financial features for real-world commerce.</p>
+            <a href="https://hacash.org/whitepaper.pdf" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">Read the Complete Whitepaper</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Hacash</h4>
+                    <p>A cryptocurrency system designed for large-scale payments and real-time settlement with infinite scalability.</p>
+                    <a href="https://hacash.org/" target="_blank" rel="noopener noreferrer" style="color: #5b8fc7; text-decoration: none; font-weight: 500; display: inline-block; margin-top: 10px;">Visit hacash.org →</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#technology">Technology</a></li>
+                        <li><a href="https://hacash.org/whitepaper.pdf" target="_blank" rel="noopener noreferrer">Whitepaper</a></li>
+                        <li><a href="https://explorer.hacash.org/" target="_blank" rel="noopener noreferrer">Hacash Explorer</a></li>
+                        <li><a href="https://wallet.hacash.org/" target="_blank" rel="noopener noreferrer">Hacash Wallet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Information</h4>
+                    <ul>
+                        <li>Whitepaper: 82 pages</li>
+                        <li>Published: 2018</li>
+                        <li>Author: Anonymous</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://github.com/hacash" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+                        <li><a href="https://t.me/hacash" target="_blank" rel="noopener noreferrer">Telegram Chat</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hacash Whitepaper Documentation | All rights reserved</p>
+                <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">Disclaimer: This is an educational presentation of the Hacash whitepaper. Always conduct thorough research before engaging with any cryptocurrency system.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Performance Monitoring -->
+    <script defer>
+        if (window.performance && window.performance.timing) {
+            window.addEventListener('load', function() {
+                const perfData = window.performance.timing;
+                const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+                console.log('Page Load Time: ' + pageLoadTime + 'ms');
+            });
+        }
+        
+        // Lazy load images
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.style.opacity = '1';
+                        imageObserver.unobserve(img);
+                    }
+                });
+            }, { rootMargin: '50px' });
+            
+            document.querySelectorAll('img').forEach(img => {
+                img.style.transition = 'opacity 0.3s ease';
+                img.style.opacity = '0.8';
+                imageObserver.observe(img);
+            });
+        }
+    </script>
+    <script defer src="script.js"></script>
+</body>
+</html>

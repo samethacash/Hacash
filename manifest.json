@@ -1,0 +1,48 @@
+{
+  "name": "Hacash - Real-Time Cryptocurrency Settlement Network",
+  "short_name": "Hacash",
+  "description": "Hacash: Real-time global payments at scale with 1M+ TPS capability",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0066cc",
+  "background_color": "#ffffff",
+  "categories": ["finance", "cryptocurrency"],
+  "screenshots": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "View Whitepaper",
+      "short_name": "Whitepaper",
+      "description": "Read the full Hacash whitepaper",
+      "url": "/index.html#technology",
+      "icons": [
+        {
+          "src": "/images/logo.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

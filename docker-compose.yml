@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  # Nginx + Static Files
+  web:
+    build: .
+    container_name: hacash-web
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./:/usr/share/nginx/html/:ro
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    environment:
+      - TZ=UTC
+    restart: unless-stopped
+    networks:
+      - hacash-network
+    depends_on:
+      - cache
+
+  # Redis Cache (for distributed caching at scale)
+  cache:
+    image: redis:alpine
+    container_name: hacash-cache
+    ports:
+      - "6379:6379"
+    environment:
+      - TZ=UTC
+    restart: unless-stopped
+    volumes:
+      - cache-data:/data
+    networks:
+      - hacash-network
+    command: redis-server --appendonly yes --maxmemory 512mb --maxmemory-policy allkeys-lru
+
+  # Optional: CDN Mock (for testing)
+  cdn:
+    image: nginx:alpine
+    container_name: hacash-cdn
+    volumes:
+      - ./images:/usr/share/nginx/html/images:ro
+    ports:
+      - "8080:80"
+    networks:
+      - hacash-network
+    restart: unless-stopped
+
+volumes:
+  cache-data:
+    driver: local
+
+networks:
+  hacash-network:
+    driver: bridge
