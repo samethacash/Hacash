@@ -3702,6 +3702,11 @@ section {
 }
 
 @media (max-width: 480px) {
+    html, body {
+        zoom: 0.5;
+        transform-origin: top left;
+    }
+
     /* Container Fix */
     .container {
         max-width: 100%;
