@@ -22,6 +22,9 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
     font-family-display: swap;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 body {
@@ -33,6 +36,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 .container {
@@ -2625,25 +2631,658 @@ section {
 
 /* ===== Responsive Updates ===== */
 @media (max-width: 768px) {
-    .hero-stats {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
+    .navbar {
+        padding: 10px 20px;
+        flex-wrap: wrap;
     }
 
-    .stat-number {
+    .navbar .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    .logo {
+        gap: 10px;
+        margin-right: auto;
+    }
+
+    .logo h1 {
+        font-size: 1.3rem;
+    }
+
+    .logo-img {
+        height: 50px;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background: linear-gradient(135deg, rgba(10, 14, 19, 0.99), rgba(26, 47, 74, 0.99));
+        padding: 15px 20px;
+        gap: 8px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-links.active {
+        max-height: 500px;
+    }
+
+    .nav-links a {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+
+    .price-widget {
+        display: none;
+    }
+
+    /* Price Banner */
+    .price-banner {
+        padding: 12px 20px;
+    }
+
+    .price-banner-content {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 15px;
+    }
+
+    #hacPrice {
         font-size: 1.8rem;
     }
 
+    .price-label {
+        font-size: 0.75rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 80px 20px 70px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-badge {
+        padding: 10px 16px;
+        font-size: 0.8rem;
+    }
+
+    .hero-highlight-box {
+        padding: 25px 20px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .highlight-row {
+        gap: 10px;
+        margin-bottom: 16px;
+    }
+
+    .highlight-label {
+        font-size: 0.85rem;
+        min-width: auto;
+    }
+
+    .highlight-value {
+        min-width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 0.85rem;
+        width: 100%;
+    }
+
+    .btn-large {
+        padding: 16px 32px;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+
+    .stat-card {
+        padding: 20px 15px;
+    }
+
+    .stat-icon {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.75rem;
+    }
+
+    /* Sections */
+    section {
+        padding: 40px 20px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    /* Cards - Overview */
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .overview-card {
+        padding: 25px 18px;
+    }
+
+    .overview-card .icon {
+        font-size: 2.8rem;
+        margin-bottom: 12px;
+    }
+
+    .overview-card h3 {
+        font-size: 1.15rem;
+        margin-bottom: 10px;
+    }
+
+    .overview-card p {
+        font-size: 0.82rem;
+        line-height: 1.5;
+    }
+
+    /* Cards - Features */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .feature-item {
+        padding: 25px 18px;
+    }
+
+    .feature-item h4 {
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+    }
+
+    .feature-item p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    /* Cards - General Grid Layouts */
+    .incentives-grid,
+    .currency-tiers,
+    .security-grid,
+    .principles-grid,
+    .types-grid,
+    .usecases-grid,
+    .problem-grid,
+    .highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .incentive-card,
+    .tier,
+    .security-item,
+    .principle,
+    .type-card,
+    .usecase-card,
+    .problem-card,
+    .highlight-card {
+        padding: 22px 16px;
+    }
+
+    .incentive-card h3,
+    .tier h4,
+    .security-item h3,
+    .principle h3,
+    .usecase-card h3,
+    .problem-card h3,
+    .highlight-card h3 {
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+    }
+
+    .incentive-card p,
+    .tier p,
+    .security-item p,
+    .principle p,
+    .usecase-card p,
+    .problem-card p,
+    .highlight-card p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    /* Solution Cards */
+    .solution-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .solution-card {
+        padding: 22px 16px;
+    }
+
+    .solution-card h3 {
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+    }
+
+    .solution-icon {
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+    }
+
+    /* Flow Diagram */
+    .flow-diagram {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .flow-step {
+        padding: 22px 16px;
+    }
+
+    .step-number {
+        font-size: 1.4rem;
+        width: 55px;
+        height: 55px;
+    }
+
+    .step-content h4 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .step-content p {
+        font-size: 0.8rem;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    /* Calculations */
+    .calculation-steps {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .step {
+        padding: 18px 14px;
+        gap: 12px;
+    }
+
+    .step-num {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .step-text {
+        font-size: 0.9rem;
+    }
+
+    /* Tables */
+    .comparison-table,
+    .units-table {
+        font-size: 0.8rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td,
+    .units-table th,
+    .units-table td {
+        padding: 10px 8px;
+    }
+
+    /* Images/Diagrams */
+    .overview-diagram,
+    .tech-diagram,
+    .currency-diagram {
+        margin-bottom: 30px;
+    }
+
+    /* Tech Section */
+    .tech-section {
+        padding: 25px 18px;
+        margin-bottom: 25px;
+    }
+
+    .tech-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        padding-bottom: 12px;
+    }
+
+    .tech-text {
+        font-size: 0.9rem;
+    }
+
+    .tech-list li {
+        padding: 8px 0 8px 22px;
+        font-size: 0.85rem;
+    }
+
+    /* FAQ */
+    .faq-item summary {
+        padding: 18px 20px;
+    }
+
+    .faq-item summary h3 {
+        font-size: 1rem;
+    }
+
+    .faq-answer {
+        padding: 0 20px 18px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 40px 20px 10px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .footer-content > div {
+        padding: 18px;
+    }
+
+    .footer-section h4 {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 0.85rem;
+    }
+
+    /* Highlights Summary */
+    .highlights-summary {
+        padding: 25px 18px;
+        margin-top: 30px;
+    }
+
+    .highlights-summary h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .highlights-summary p {
+        font-size: 0.85rem;
+    }
+
+    /* Solution Box */
+    .solution-box {
+        padding: 25px;
+    }
+
+    .solution-intro {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    /* Problem Grid */
     .problem-grid {
         grid-template-columns: 1fr;
     }
 
-    .usecases-grid {
-        grid-template-columns: 1fr;
+    .problem-card h3 {
+        font-size: 1.1rem;
     }
 
-    .calculation-steps {
-        grid-template-columns: 1fr;
+    .problem-detail {
+        margin-top: 12px;
+        font-size: 0.8rem;
+    }
+
+    /* CTA Section */
+    .cta {
+        padding: 50px 20px;
+    }
+
+    .cta h2 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+
+    .cta p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    /* Investment Highlights */
+    .investment-highlights {
+        padding: 40px 20px;
+    }
+
+    .highlights-grid {
+        margin: 30px 0 40px;
+    }
+
+    .highlight-icon {
+        font-size: 2.5rem;
+        margin-bottom: 12px;
+    }
+
+    .highlight-card h3 {
+        font-size: 1.05rem;
+        margin-bottom: 10px;
+    }
+
+    .highlight-card p {
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+    }
+
+    .highlight-list li {
+        padding: 8px 0 8px 22px;
+        font-size: 0.8rem;
+    }
+
+    /* Issuance Info */
+    .issuance-info {
+        padding: 25px 18px;
+        margin-top: 25px;
+    }
+
+    .issuance-info p {
+        margin-bottom: 8px;
+        font-size: 0.9rem;
+    }
+
+    /* Hash Algorithm */
+    .hash-algo {
+        padding: 25px 18px;
+        margin-top: 25px;
+    }
+
+    /* Whitepaper */
+    .whitepaper {
+        padding: 40px 20px;
+    }
+
+    .whitepaper-intro {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .whitepaper-toc {
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+
+    .whitepaper-toc h3 {
+        font-size: 1.15rem;
+        margin-bottom: 18px;
+    }
+
+    .whitepaper-toc ol {
+        margin-left: 18px;
+    }
+
+    .whitepaper-toc li {
+        margin-bottom: 8px;
+        font-size: 0.85rem;
+    }
+
+    .content-section summary {
+        padding: 16px 18px;
+        font-size: 0.95rem;
+    }
+
+    .details-content {
+        padding: 0 18px 18px;
+        font-size: 0.85rem;
+    }
+
+    .full-width summary {
+        padding: 16px 18px;
+        font-size: 0.95rem;
+    }
+
+    .details-content h4 {
+        font-size: 0.95rem;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    .details-content ul,
+    .details-content ol {
+        margin-left: 16px;
+    }
+
+    .details-content li {
+        margin-bottom: 8px;
+        font-size: 0.85rem;
+    }
+
+    .whitepaper-download {
+        padding: 25px;
+        margin-top: 30px;
+    }
+
+    .whitepaper-download h3 {
+        font-size: 1.15rem;
+    }
+
+    .whitepaper-sections {
+        padding: 25px;
+        margin-top: 30px;
+    }
+
+    .whitepaper-sections h3 {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .references-section {
+        padding: 25px;
+        margin-top: 30px;
+    }
+
+    .references-section h3 {
+        font-size: 1.3rem;
+        margin-bottom: 18px;
+    }
+
+    .references-section ol {
+        margin-left: 16px;
+    }
+
+    .references-section li {
+        margin-bottom: 12px;
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Efficiency Box */
+    .efficiency-box {
+        padding: 25px;
+        margin-top: 30px;
+    }
+
+    .efficiency-box h3 {
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+    }
+
+    .efficiency-box > p {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    /* Channels */
+    .channel-types {
+        margin-top: 30px;
+    }
+
+    .types-grid {
+        margin-top: 18px;
+    }
+
+    .type-card {
+        padding: 20px;
+    }
+
+    .type-card h4 {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .type-card p {
+        font-size: 0.85rem;
+        margin-bottom: 8px;
     }
 }
 
@@ -3032,92 +3671,608 @@ section {
 }
 
 @media (max-width: 480px) {
+    /* Navbar */
     .navbar {
-        padding: 10px 15px;
+        padding: 8px 12px;
     }
 
     .logo h1 {
-        font-size: 1.3rem;
-    }
-
-    .logo-img {
-        height: 45px;
-    }
-
-    .hero-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .hero-subtitle {
         font-size: 1rem;
     }
 
-    .hero-highlight-box {
-        margin-top: 60px;
-        padding: 20px 15px;
+    .logo-img {
+        height: 40px;
     }
 
-    h2 {
-        font-size: 1.5rem;
+    .nav-links a {
+        padding: 10px 12px;
+        font-size: 0.75rem;
+    }
+
+    /* Price Banner */
+    .price-banner {
+        padding: 10px 12px;
+    }
+
+    .price-banner-content {
+        padding: 8px 12px;
+        gap: 6px;
+    }
+
+    #hacPrice {
+        font-size: 1.4rem;
+        min-width: 120px;
+    }
+
+    .price-label {
+        font-size: 0.65rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 60px 15px 50px;
+    }
+
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
         margin-bottom: 20px;
     }
 
-    h3 {
-        font-size: 1.1rem;
+    .hero-badge {
+        padding: 8px 12px;
+        font-size: 0.7rem;
     }
 
-    p {
+    .hero-highlight-box {
+        padding: 18px 12px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .highlight-row {
+        gap: 8px;
+        margin-bottom: 12px;
+    }
+
+    .highlight-label {
+        font-size: 0.75rem;
+    }
+
+    .highlight-value {
+        font-size: 0.8rem;
+    }
+
+    .hero-buttons {
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .btn {
+        padding: 10px 18px;
+        font-size: 0.75rem;
+    }
+
+    .btn-large {
+        padding: 14px 24px;
+        font-size: 0.85rem;
+        width: 100%;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .stat-card {
+        padding: 15px 12px;
+    }
+
+    .stat-icon {
+        font-size: 1.5rem;
+        margin-bottom: 6px;
+    }
+
+    .stat-number {
+        font-size: 1.2rem;
+    }
+
+    .stat-label {
+        font-size: 0.65rem;
+    }
+
+    .hero-meta {
+        font-size: 0.8rem;
+    }
+
+    /* Sections */
+    section {
+        padding: 30px 12px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        margin-bottom: 18px;
+    }
+
+    h3 {
         font-size: 0.95rem;
     }
 
-    section {
-        padding: 30px 15px;
+    h4 {
+        font-size: 0.9rem;
     }
 
+    p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 12px;
+    }
+
+    /* Cards - All Types */
     .overview-grid,
     .features-grid,
     .incentives-grid,
     .currency-tiers,
     .security-grid,
     .principles-grid,
-    .types-grid {
+    .types-grid,
+    .usecases-grid,
+    .problem-grid,
+    .highlights-grid,
+    .solution-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .overview-card,
+    .feature-item,
+    .incentive-card,
+    .tier,
+    .security-item,
+    .principle,
+    .type-card,
+    .usecase-card,
+    .problem-card,
+    .highlight-card,
+    .solution-card {
+        padding: 16px 12px;
+    }
+
+    .overview-card .icon {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    .overview-card h3,
+    .feature-item h4,
+    .incentive-card h3,
+    .tier h4,
+    .security-item h3,
+    .principle h3,
+    .usecase-card h3,
+    .problem-card h3,
+    .highlight-card h3,
+    .solution-card h3 {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .overview-card p,
+    .feature-item p,
+    .incentive-card p,
+    .tier p,
+    .security-item p,
+    .principle p,
+    .usecase-card p,
+    .problem-card p,
+    .highlight-card p,
+    .solution-card p {
+        font-size: 0.75rem;
+        line-height: 1.4;
+    }
+
+    .solution-icon {
+        font-size: 1.8rem;
+        margin-bottom: 8px;
+    }
+
+    /* Lists */
+    .highlight-list li,
+    .usecase-card li,
+    .tier ul li,
+    .security-item li,
+    .tech-list li {
+        padding: 6px 0 6px 18px;
+        font-size: 0.75rem;
+    }
+
+    .highlight-list li::before,
+    .usecase-card li:before,
+    .tier ul li:before,
+    .security-item li:before,
+    .tech-list li:before {
+        font-size: 0.8rem;
+    }
+
+    /* Flow */
+    .flow-diagram {
         grid-template-columns: 1fr;
         gap: 15px;
     }
 
-    .feature-item {
-        padding: 15px;
+    .flow-step {
+        padding: 16px 12px;
     }
 
+    .step-number {
+        font-size: 1rem;
+        width: 45px;
+        height: 45px;
+    }
+
+    .step-content h4 {
+        font-size: 0.85rem;
+        margin-bottom: 6px;
+    }
+
+    .step-content p {
+        font-size: 0.7rem;
+    }
+
+    /* Calculations */
+    .calculation-steps {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .step {
+        padding: 14px 10px;
+        gap: 10px;
+    }
+
+    .step-num {
+        width: 40px;
+        height: 40px;
+        font-size: 0.95rem;
+    }
+
+    .step-text {
+        font-size: 0.8rem;
+    }
+
+    /* Tables */
     .comparison-table,
     .units-table {
-        font-size: 0.8rem;
+        font-size: 0.65rem;
     }
 
     .comparison-table th,
     .comparison-table td,
     .units-table th,
     .units-table td {
-        padding: 8px;
+        padding: 6px 4px;
     }
 
-    .flow-step {
-        padding: 15px;
+    /* Tech */
+    .tech-section {
+        padding: 18px 12px;
+        margin-bottom: 18px;
     }
 
-    .step-number {
-        font-size: 1.5rem;
-        width: 50px;
-        height: 50px;
-        line-height: 30px;
+    .tech-section h3 {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+        padding-bottom: 10px;
     }
 
-    section {
-        padding: 40px 15px;
+    .tech-text {
+        font-size: 0.8rem;
     }
 
-    .container {
-        padding: 0 15px;
+    /* FAQ */
+    .faq-item summary {
+        padding: 14px 12px;
+    }
+
+    .faq-item summary h3 {
+        font-size: 0.9rem;
+    }
+
+    .faq-toggle {
+        font-size: 1.3rem;
+    }
+
+    .faq-answer {
+        padding: 0 12px 14px;
+        font-size: 0.75rem;
+    }
+
+    .faq-answer ul {
+        margin-left: 14px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 30px 12px 8px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .footer-content > div {
+        padding: 14px;
+    }
+
+    .footer-section h4 {
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .footer-section p,
+    .footer-section a {
+        font-size: 0.75rem;
+    }
+
+    .footer-section ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-bottom {
+        padding-top: 18px;
+        font-size: 0.7rem;
+    }
+
+    .footer-bottom p {
+        margin-bottom: 6px;
+    }
+
+    /* Highlights Summary */
+    .highlights-summary {
+        padding: 18px 12px;
+        margin-top: 20px;
+    }
+
+    .highlights-summary h3 {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+    }
+
+    .highlights-summary p {
+        font-size: 0.75rem;
+        margin-bottom: 12px;
+    }
+
+    /* Solution Box */
+    .solution-box {
+        padding: 18px 12px;
+    }
+
+    .solution-intro {
+        font-size: 0.85rem;
+        margin-bottom: 16px;
+    }
+
+    /* Problem Detail */
+    .problem-detail {
+        margin-top: 10px;
+        font-size: 0.7rem;
+        padding: 10px 12px;
+    }
+
+    /* CTA */
+    .cta {
+        padding: 40px 12px;
+    }
+
+    .cta h2 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+    }
+
+    .cta p {
+        font-size: 0.85rem;
+        margin-bottom: 18px;
+    }
+
+    /* Investment Highlights */
+    .investment-highlights {
+        padding: 30px 12px;
+    }
+
+    .highlights-grid {
+        margin: 20px 0 30px;
+        gap: 12px;
+    }
+
+    .highlight-icon {
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    /* Issuance Info */
+    .issuance-info {
+        padding: 18px 12px;
+        margin-top: 18px;
+    }
+
+    .issuance-info p {
+        margin-bottom: 6px;
+        font-size: 0.78rem;
+    }
+
+    .highlight {
+        padding: 6px 8px;
+        font-size: 0.75rem;
+    }
+
+    /* Hash Algo */
+    .hash-algo {
+        padding: 18px 12px;
+        margin-top: 18px;
+    }
+
+    /* Whitepaper */
+    .whitepaper {
+        padding: 30px 12px;
+    }
+
+    .whitepaper-intro {
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+    }
+
+    .whitepaper-toc {
+        padding: 18px;
+        margin-bottom: 20px;
+    }
+
+    .whitepaper-toc h3 {
+        font-size: 1rem;
+        margin-bottom: 14px;
+    }
+
+    .whitepaper-toc ol {
+        margin-left: 14px;
+    }
+
+    .whitepaper-toc li {
+        margin-bottom: 6px;
+        font-size: 0.75rem;
+    }
+
+    .content-section summary {
+        padding: 12px 12px;
+        font-size: 0.85rem;
+    }
+
+    .details-content {
+        padding: 0 12px 12px;
+        font-size: 0.75rem;
+    }
+
+    .full-width summary {
+        padding: 12px 12px;
+        font-size: 0.85rem;
+    }
+
+    .details-content h4 {
+        font-size: 0.85rem;
+        margin-top: 10px;
+        margin-bottom: 8px;
+    }
+
+    .details-content ul,
+    .details-content ol {
+        margin-left: 12px;
+    }
+
+    .details-content li {
+        margin-bottom: 6px;
+        font-size: 0.7rem;
+    }
+
+    .details-content code {
+        padding: 2px 4px;
+        font-size: 0.65rem;
+    }
+
+    .whitepaper-download {
+        padding: 18px;
+        margin-top: 20px;
+    }
+
+    .whitepaper-download h3 {
+        font-size: 1rem;
+    }
+
+    .whitepaper-sections {
+        padding: 18px;
+        margin-top: 20px;
+    }
+
+    .whitepaper-sections h3 {
+        font-size: 1.05rem;
+        margin-bottom: 14px;
+    }
+
+    .references-section {
+        padding: 18px;
+        margin-top: 20px;
+    }
+
+    .references-section h3 {
+        font-size: 1.1rem;
+        margin-bottom: 14px;
+    }
+
+    .references-section ol {
+        margin-left: 12px;
+    }
+
+    .references-section li {
+        margin-bottom: 10px;
+        font-size: 0.75rem;
+        line-height: 1.5;
+    }
+
+    /* Efficiency Box */
+    .efficiency-box {
+        padding: 18px;
+        margin-top: 20px;
+    }
+
+    .efficiency-box h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .efficiency-box > p {
+        font-size: 0.8rem;
+        margin-bottom: 15px;
+    }
+
+    /* Channels */
+    .channel-types {
+        margin-top: 20px;
+    }
+
+    .types-grid {
+        margin-top: 12px;
+        gap: 12px;
+    }
+
+    .type-card {
+        padding: 14px;
+    }
+
+    .type-card h4 {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .type-card p {
+        font-size: 0.75rem;
+        margin-bottom: 6px;
+    }
+
+    /* Flow Subtitle */
+    .flow-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .flow-header h3 {
+        font-size: 1.4rem;
     }
 }
 
