@@ -1,10 +1,3 @@
-// ===== Mobile Zoom for Small Phones =====
-(function() {
-    if (window.innerWidth <= 480) {
-        document.documentElement.style.zoom = '0.5';
-    }
-})();
-
 // ===== Performance Optimization: Debounce Function =====
 function debounce(func, wait) {
     let timeout;
