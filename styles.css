@@ -5,7 +5,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    max-width: 100% !important;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 :root {
@@ -13,23 +18,12 @@
     --secondary-color: #4a90e2;
     --accent-color: #5b8fc7;
     --dark-bg: #0f1419;
-    --light-bg: #f8f9fa;
     --text-dark: #1a1a1a;
     --text-light: #666666;
     --border-color: #ddd;
     --success-color: #28a745;
     --warning-color: #ffc107;
     --green-accent: #00d084;
-}
-
-html {
-    scroll-behavior: smooth;
-    overflow-x: hidden !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-y: scroll;
-    touch-action: pan-y;
-    overscroll-behavior-x: none;
 }
 
 body {
@@ -39,24 +33,19 @@ body {
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    overflow-x: hidden !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    touch-action: pan-y;
-    overscroll-behavior-x: none;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-dark);
+    background-color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 /* ===== CONTAINER ===== */
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
-    box-sizing: border-box;
-}
 
 /* ===== NAVIGATION ===== */
 .navbar {
@@ -72,6 +61,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 12px;
 }
 
 .logo {
@@ -106,6 +96,57 @@ body {
     border-bottom: 1px solid var(--border-color);
     max-height: calc(100vh - 60px);
     overflow-y: auto;
+}
+
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lang-btn {
+    position: absolute;
+    right: 16px;
+    top: 10px;
+    background: #ffffff;
+    color: var(--primary-color);
+    padding: 10px 18px;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 8px rgba(0, 102, 204, 0.15);
+    z-index: 1001;
+}
+
+.lang-btn:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+.lang-btn {
+    background: #ffffff;
+    color: var(--primary-color);
+    padding: 9px 16px;
+    border: 1.5px solid var(--primary-color);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 8px rgba(0, 102, 204, 0.15);
+}
+
+.lang-btn:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transform: translateY(-1px);
 }
 
 .nav-links.active {
@@ -402,22 +443,20 @@ section p {
 }
 
 /* ===== BUTTONS ===== */
-.btn {
-    display: inline-block;
-    padding: 14px 16px;
-    background-color: var(--primary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    border: none;
-    transition: background-color 0.3s;
-    white-space: normal;
-    word-wrap: break-word;
-    max-width: 100%;
-    line-height: 1.4;
+
+.navbar {
+    background-color: white;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 12px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .btn:hover {
@@ -440,36 +479,7 @@ section p {
 }
 
 /* ===== CTA SECTION ===== */
-.cta-section {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: white;
-    padding: 32px 16px;
-    text-align: center;
-}
 
-.cta-section h2 {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 16px;
-}
-
-.cta-section p {
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 24px;
-    font-size: 14px;
-}
-
-.cta-button {
-    background-color: white;
-    color: var(--primary-color);
-    padding: 12px 24px;
-    font-weight: 600;
-    margin-top: 12px;
-}
-
-.cta-button:hover {
-    background-color: #f0f0f0;
-}
 
 /* ===== FAQ SECTION ===== */
 .faq-item {
@@ -616,6 +626,14 @@ table tr:hover {
         overflow: visible;
         gap: 30px;
         top: auto;
+    }
+
+    .nav-right {
+        gap: 12px;
+    }
+
+    .lang-btn {
+        padding: 8px 16px;
     }
 
     .nav-links li {
